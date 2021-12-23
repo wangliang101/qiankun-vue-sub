@@ -11,10 +11,15 @@
 </template>
 
 <script>
-
+import { getCurrentInstance } from 'vue';
 export default {
   name: 'App',
-  
+  setup(){
+    const { proxy } = getCurrentInstance();
+    // 不能使用ctx,在生产环境会拿不到
+    // 此处时主要为了测试instance.config.globalProperties在main的哪个位置挂载，此处可以拿到挂载值
+    console.log('proxy', proxy.$setGlobalState)
+  },
 }
 </script>
 

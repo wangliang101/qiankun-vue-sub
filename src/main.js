@@ -14,6 +14,8 @@ function render(props = {}) {
 
   instance = createApp(App);
   instance.use(router);
+  instance.config.globalProperties.$setGlobalState = props.setGlobalState;
+  instance.config.globalProperties.$onGlobalStateChange = props.onGlobalStateChange;
   instance.mount(container ? container.querySelector('#app') : '#app');
 }
 
@@ -30,9 +32,10 @@ export async function bootstrap() {
 export async function mount(props) {
   console.log('[vue] props from main framework', props);
   render(props);
+  
 }
 export async function unmount() {
-  console.log('instance', instance)
+  
   instance.unmount();
   instance._container.innerHTML = '';
   instance = null;
