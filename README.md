@@ -10,15 +10,13 @@ yarn install
 yarn serve
 ```
 
-### Compiles and minifies for production
+## Build docker image
 ```
-yarn build
-```
-
-### Lints and fixes files
-```
-yarn lint
+ yarn build:docker tag='1.0.0'
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## Learn More
+
+You can learn more in the [qiankun demo](https://blog.csdn.net/qq_39544148/article/details/121911588).
+
+
