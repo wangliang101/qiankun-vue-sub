@@ -1,0 +1,7 @@
+version: '2.3'
+services:
+  vue-sub:
+    image: wangliang4468/qiankun:vue-sub-1.0.0
+    restart: always
+    ports:
+      - 5002:80

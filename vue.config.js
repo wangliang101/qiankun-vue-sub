@@ -12,4 +12,5 @@ module.exports = {
       jsonpFunction: `webpackJsonp_${name}`,
     },
   },
+  publicPath:'/vue-sub'
 };
